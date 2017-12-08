@@ -65,7 +65,7 @@
       },
       data: JSON.stringify({ query: text, lang: "fr", sessionId: "somerandomthing" }),
       success: function(data) {
-        setResponse(JSON.stringify(analyse(data.result.fulfillment.speech), undefined, 2));
+        setResponse(cutQuotes(JSON.stringify(analyse(data.result.fulfillment.speech), undefined, 2)));
       },
       error: function() {
         setResponse("Internal Server Error");
