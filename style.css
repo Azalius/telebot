@@ -6,6 +6,7 @@ input {
   border-color: grey;
   height:50px;
   margin-top: 20px;
+  padding-left:10px;
 }
 textarea {
   border-radius: 5px;
@@ -13,11 +14,14 @@ textarea {
   width: 100%;
   margin-top: 20px;
   height:100px;
+  padding-left:10px;
+  padding-top:5px;
  }
  h1{
    text-align: center;
    color:#FFD655;
    margin-top: 20px;
+   font-family:sans-serif;
  }
  body{
    background-color: #046380;
