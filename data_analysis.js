@@ -88,6 +88,22 @@ function getWant(mot){
   return mot;
 }
 
+function getQual(mot){
+  var debut = mot.indexOf("[");
+  var fin = mot.indexOf("]");
+  if (debut == -1 || fin == -1){
+    return mot;
+  }
+  var nom = mot.substring(debut+1, fin);
+
+  for (var i = 0, len = data.length; i < len; i++) {
+    if (data[i][0].toLowerCase().indexOf(nom) != -1){
+      return "Pour moi, la principale qualité de  "+ nom + " est : " + data[i][6]
+    }
+  }
+  return mot;
+}
+
 function getResp(mot){
   var debut = mot.indexOf("[");
   var fin = mot.indexOf("]");
@@ -152,5 +168,6 @@ function analyse(mot){
   if (mot.indexOf("getAll") != -1 ) {mot = getAll(mot);}
   if (mot.indexOf("resp") != -1 ) {mot = getResp(mot);}
   if (mot.indexOf("want") != -1 ) {mot = getWant(mot);}
+  if (mot.indexOf("qual") != -1 ) {mot = getQual(mot);}
   return mot;
 }

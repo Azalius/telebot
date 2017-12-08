@@ -26,3 +26,9 @@ textarea {
  body{
    background-color: #046380;
  }
+.img{
+  width : 30px;
+}
+button{
+  margin-top : 10px;
+}
