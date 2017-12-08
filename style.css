@@ -19,12 +19,12 @@ textarea {
  }
  h1{
    text-align: center;
-   color:#FFD655;
+   color:Rgb(255,210,0);
    margin-top: 20px;
    font-family:sans-serif;
  }
  body{
-   background-color: #046380;
+   background-color: Rgb(53,74,159);
  }
 .img{
   width : 30px;
