@@ -76,3 +76,7 @@
   function setResponse(val) {
     $("#response").text(val);
   }
+	function parler(){
+		valDial=document.getElementById('response');
+		responsiveVoice.speak(valDial.value,'French Female');
+	}
