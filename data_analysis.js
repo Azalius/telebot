@@ -143,7 +143,23 @@ for (i=1;i<mot.length-1;i++){
   }
   return newmot;
 }
+function getAll(mot){
+  var debut = mot.indexOf("[");
+  var fin = mot.indexOf("]");
+  if (debut == -1 || fin == -1){
+    return mot;
+  }
+  var nom = mot.substring(debut+1, fin);
 
+  var liste = "Les " + nom + " sont composés de "
+
+  for (var i = 0, len = data.length; i < len; i++) {
+    if (data[i][5].toLowerCase().indexOf(nom) != -1){
+      liste = liste + data[i][0] + " "
+    }
+  }
+  return liste
+}
 function analyse(mot){
   if (mot.indexOf("wiki") != -1 ) {mot = getWiki(mot);}
   if (mot.indexOf("role") != -1 ) {mot = getRole(mot);}
@@ -151,5 +167,6 @@ function analyse(mot){
   if (mot.indexOf("resp") != -1 ) {mot = getResp(mot);}
   if (mot.indexOf("want") != -1 ) {mot = getWant(mot);}
   if (mot.indexOf("qual") != -1 ) {mot = getQual(mot);}
+  if (mot.indexOf("getAll") != -1 ) {mot = getAll(mot);}
   return mot;
 }
