@@ -50,7 +50,7 @@ function getRole(mot){
 
   for (var i = 0, len = data.length; i < len; i++) {
     if (data[i][0].toLowerCase().indexOf(nom) != -1){
-      return "Son role est : " + data[i][2]
+      return "Son role est : " + data[i][2].toLowerCase()
     }
   }
   return mot;
@@ -66,7 +66,7 @@ function getLive(mot){
 
   for (var i = 0, len = data.length; i < len; i++) {
     if (data[i][0].toLowerCase().indexOf(nom) != -1){
-      return nom + " vit actuellement à : " + data[i][1]
+      return nom + " vit actuellement à : " + data[i][1].toLowerCase()
     }
   }
   return mot;
@@ -82,7 +82,7 @@ function getWant(mot){
 
   for (var i = 0, len = data.length; i < len; i++) {
     if (data[i][0].toLowerCase().indexOf(nom) != -1){
-      return "Le but de "+ nom + " est : " + data[i][7]
+      return "Le but de "+ nom + " est : " + data[i][7].toLowerCase()
     }
   }
   return mot;
@@ -98,7 +98,7 @@ function getQual(mot){
 
   for (var i = 0, len = data.length; i < len; i++) {
     if (data[i][0].toLowerCase().indexOf(nom) != -1){
-      return "Pour moi, la principale qualité de  "+ nom + " est : " + data[i][6]
+      return "Pour moi, la principale qualité de  "+ nom + " est : " + data[i][6].toLowerCase()
     }
   }
   return mot;
@@ -130,27 +130,10 @@ function getWiki(mot){
 
   for (var i = 0, len = data.length; i < len; i++) {
     if (data[i][0].toLowerCase().indexOf(nom) != -1){
-      return nom + " est un " + data[i][2] + " qui ne vit que pour " + data[i][7] +  ". N'hesite pas a visiter sa page wiki : " + data[i][8]
+      return nom + " est un " + data[i][2].toLowerCase() + " qui ne vit que pour " + data[i][7].toLowerCase() +  ". N'hesite pas a visiter sa page wiki : " + data[i][8]
     }
   }
   return mot;
-}
-function getAll(mot){
-  var debut = mot.indexOf("[");
-  var fin = mot.indexOf("]");
-  if (debut == -1 || fin == -1){
-    return mot;
-  }
-  var nom = mot.substring(debut+1, fin);
-
-  var liste = "Les " + nom + " sont composés de "
-
-  for (var i = 0, len = data.length; i < len; i++) {
-    if (data[i][5].toLowerCase().indexOf(nom) != -1){
-      liste = liste + data[i][0] + " "
-    }
-  }
-  return liste
 }
 
 function cutQuotes(mot){
@@ -165,7 +148,6 @@ function analyse(mot){
   if (mot.indexOf("wiki") != -1 ) {mot = getWiki(mot);}
   if (mot.indexOf("role") != -1 ) {mot = getRole(mot);}
   if (mot.indexOf("live") != -1 ) {mot = getLive(mot);}
-  if (mot.indexOf("getAll") != -1 ) {mot = getAll(mot);}
   if (mot.indexOf("resp") != -1 ) {mot = getResp(mot);}
   if (mot.indexOf("want") != -1 ) {mot = getWant(mot);}
   if (mot.indexOf("qual") != -1 ) {mot = getQual(mot);}
