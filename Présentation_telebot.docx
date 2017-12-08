@@ -9,21 +9,52 @@
 Telebot
 Le chatbot intelligent
 
-Table des matières
+
+
+
+
+
+
 
 Table des matières
-
+I – Accès	3
+II – Développement et conception	3
+III – De quoi est capable mon chatbot ?	3
+IV – Enrichissement	3
 
 I – Accès
 
-	Accéder à notre chatbot n'est pas compliqué : --TODO
+	Accéder à notre chatbot n'est pas compliqué : téléchargez les fichiers se trouvant sur le github https://github.com/Azalius/telebot
 
-	Une fois celui-ci téléchargé, il suffit de lancer le fichier index.html, et voilà !
+	Une fois celui-ci téléchargé, il suffit de lancer le fichier index.html, et il ne vous reste plus qu'à poser vos questions en rapport avec l'univers Game of Thrones (conformément au jeu d'essai fourni)
 
 II – Développement et conception
 
-	??? – TODO
+	Après de brèves recherches, nous avons découvert Dialogflow, qui correspondait au type d'outils d'outils que nous recherchions. Nous nous sommes cependant rendu-compte que certaines fonctionnalités n'étaient pas évidente, et nous en sommes donc servi comme une base autour de laquelle nous avons implémenté du Javascript afin de créer un bot fonctionnel.
 
 III – De quoi est capable mon chatbot ?
 
-	Telebot est capable de répondre à des questions posées par l'utilisateur : de simples questions style "Small Talk" à des réponses concernant des informations précises
+	Telebot est capable de répondre à des questions posées par l'utilisateur : de simples questions style "Small Talk" à des réponses concernant des informations précises sur l'univers de Game of Thrones.
+IV – Enrichissement
+	Il est très simple d’ajouter des données : il suffit de les ajouter dans DialogFlow ainsi que dans les ressources du site. Il est cependant plus complexe d'ajouter des questions car il faut les implémenter en Javascript.
+	Nous sommes toujours actifs, donc n'hésitez pas à ouvrir des Issues sur GitHub si vous avez des remarques ou des questions.
+
+Bonus
+Implémenté ?
+Commentaires
+Le bot possède la capacité de « small talk » (capacités de discussion de base d’un bot)
+Oui
+Il peut répondre à des sollicitations simples
+Capacité à montrer la structure visuelle d’une équipe (image, indentation, etc.)
+Non
+
+Bot accessible à partir d'outils de travail collaboratifs (Slack, Skype, etc.) facilement déployable
+Non
+
+Capacité de Speech to Text et Text to Speech pour accompagner les handicaps
+Oui
+Il est possible, grâce à des boutons implémentés, de faire du Speech to Text ainsi que du Text to Speech.
+Le bot respecte la charte graphique LCL
+Oui
+Les couleurs du site, bleu et jaune/doré, ont été choisies après la charte graphique LCL.
+
