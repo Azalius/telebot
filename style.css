@@ -1,15 +1,24 @@
 body { width: 500px; margin: 0 auto; text-align: center; margin-top: 20px; }
 div {  position: absolute; }
-input { width: 400px;
+input {
+  width: 400px;
   border-radius: 5px;
   border-color: grey;
+  height:50px;
+  margin-top: 20px;
 }
 textarea {
   border-radius: 5px;
   box-shadow: 5px 5px 10px grey;
-   width: 100%;
-   margin-top : 10px;
+  width: 100%;
+  margin-top: 20px;
+  height:100px;
  }
  h1{
    text-align: center;
+   color:#FFD655;
+   margin-top: 20px;
+ }
+ body{
+   background-color: #046380;
  }
